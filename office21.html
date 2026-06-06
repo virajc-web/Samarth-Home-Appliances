@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Samarth Home Appliances</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#ffffff;
+color:#111827;
+overflow-x:hidden;
+}
+
+a{
+text-decoration:none;
+}
+
+img{
+max-width:100%;
+display:block;
+}
+
+/* NAVBAR */
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:1000;
+background:rgba(255,255,255,.92);
+backdrop-filter:blur(12px);
+box-shadow:0 2px 20px rgba(0,0,0,.08);
+}
+
+.navbar{
+max-width:1300px;
+margin:auto;
+padding:15px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.logo img{
+width:55px;
+height:55px;
+object-fit:contain;
+}
+
+.logo h2{
+font-size:22px;
+font-weight:700;
+color:#0f172a;
+}
+
+.nav-links{
+display:flex;
+gap:30px;
+}
+
+.nav-links a{
+color:#111827;
+font-weight:600;
+transition:.3s;
+}
+
+.nav-links a:hover{
+color:#22c55e;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+
+background:
+linear-gradient(
+rgba(0,0,0,.60),
+rgba(0,0,0,.60)
+),
+url("customer.png");
+
+background-size:cover;
+background-position:center;
+
+display:flex;
+align-items:center;
+}
+
+.hero-container{
+max-width:1300px;
+margin:auto;
+padding:0 50px;
+display:grid;
+grid-template-columns:1fr 1fr;
+align-items:center;
+gap:40px;
+}
+
+.hero-content{
+color:white;
+}
+
+.badge{
+display:inline-block;
+padding:10px 18px;
+background:#22c55e;
+border-radius:30px;
+font-size:14px;
+font-weight:600;
+margin-bottom:20px;
+}
+
+.hero h1{
+font-size:72px;
+line-height:1.05;
+font-weight:800;
+margin-bottom:25px;
+}
+
+.hero p{
+font-size:20px;
+line-height:1.8;
+margin-bottom:30px;
+max-width:600px;
+}
+
+.hero-buttons{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.btn-primary{
+background:#22c55e;
+color:white;
+padding:16px 32px;
+border-radius:12px;
+font-weight:600;
+}
+
+.btn-secondary{
+background:#0ea5e9;
+color:white;
+padding:16px 32px;
+border-radius:12px;
+font-weight:600;
+}
+
+.hero-product img{
+max-width:550px;
+margin:auto;
+filter:drop-shadow(0 0 30px rgba(255,255,255,.2));
+}
+
+/* TRUST SECTION */
+
+.trust{
+padding:80px 8%;
+background:white;
+}
+
+.trust-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
+}
+
+.trust-card{
+padding:30px;
+border-radius:20px;
+text-align:center;
+background:#f8fafc;
+box-shadow:0 10px 25px rgba(0,0,0,.06);
+}
+
+.trust-card h2{
+font-size:40px;
+color:#22c55e;
+margin-bottom:10px;
+}
+
+/* SECTION */
+
+.section{
+padding:120px 8%;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:60px;
+}
+
+.section-title h2{
+font-size:52px;
+font-weight:800;
+color:#0f172a;
+margin-bottom:15px;
+}
+
+.section-title p{
+font-size:18px;
+color:#64748b;
+}
+
+/* ABOUT */
+
+.about-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+.about-text p{
+font-size:18px;
+line-height:2;
+color:#475569;
+}
+
+.about-points{
+margin-top:25px;
+}
+
+.about-points li{
+margin-bottom:15px;
+font-weight:600;
+list-style:none;
+}
+
+.about-image img{
+border-radius:25px;
+box-shadow:0 20px 50px rgba(0,0,0,.15);
+}
+
+/* MOBILE */
+
+@media(max-width:991px){
+
+.hero-container,
+.about-grid{
+grid-template-columns:1fr;
+}
+
+.hero{
+height:auto;
+padding:150px 0 80px;
+}
+
+.hero h1{
+font-size:48px;
+}
+
+.trust-grid{
+grid-template-columns:1fr 1fr;
+}
+
+.nav-links{
+display:none;
+}
+
+.product-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+.product-content h3{
+font-size:38px;
+margin-bottom:20px;
+}
+
+.product-content p{
+line-height:1.9;
+margin-bottom:30px;
+}
+
+.features{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
+}
+
+.feature-box{
+background:#f8fafc;
+padding:18px;
+border-radius:15px;
+font-weight:600;
+box-shadow:0 8px 20px rgba(0,0,0,.06);
+}
+
+.why{
+background:#f8fafc;
+}
+
+.why-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
+}
+
+.why-card{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.manufacturing-img{
+width:100%;
+border-radius:25px;
+box-shadow:0 20px 40px rgba(0,0,0,.12);
+}
+
+.manufacturing-box{
+margin-top:30px;
+background:#f8fafc;
+padding:30px;
+border-radius:20px;
+}
+
+.warranty-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
+
+.warranty-card{
+background:white;
+padding:35px;
+text-align:center;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.warranty-card h3{
+font-size:42px;
+color:#22c55e;
+}
+
+.contact-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
+
+.contact-card{
+background:#f8fafc;
+padding:30px;
+border-radius:20px;
+}
+
+.footer{
+background:#0f172a;
+color:white;
+padding:80px 20px;
+text-align:center;
+}
+
+.footer-logo{
+width:90px;
+margin:auto;
+margin-bottom:20px;
+}
+
+@media(max-width:991px){
+
+.product-grid,
+.contact-grid,
+.warranty-grid,
+.why-grid{
+grid-template-columns:1fr;
+}
+
+.features{
+grid-template-columns:1fr;
+}
+
+}
+}
+.hero{
+    min-height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)),
+    url('hero-banner.png');
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:0 8%;
+}
+
+.hero-content{
+    max-width:850px;
+    color:white;
+}
+
+.hero-content h1{
+    font-size:72px;
+    font-weight:800;
+    line-height:1.1;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:22px;
+    line-height:1.8;
+    margin-bottom:35px;
+    color:#e5e5e5;
+}
+
+.hero-buttons{
+    display:flex;
+    gap:20px;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.btn-primary{
+    background:#22c55e;
+    color:white;
+    padding:16px 35px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:700;
+    font-size:18px;
+    transition:.3s;
+}
+
+.btn-primary:hover{
+    transform:translateY(-4px);
+}
+
+.btn-secondary{
+    background:#0ea5e9;
+    color:white;
+    padding:16px 35px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:700;
+    font-size:18px;
+    transition:.3s;
+}
+
+.btn-secondary:hover{
+    transform:translateY(-4px);
+}
+
+.hero-badge{
+    display:inline-block;
+    background:#22c55e;
+    padding:10px 25px;
+    border-radius:50px;
+    margin-bottom:25px;
+    font-weight:700;
+}
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f8fafc;
+    color:#1e293b;
+}
+
+section{
+    padding:100px 8%;
+}
+
+h2{
+    font-size:48px;
+    font-weight:800;
+    margin-bottom:20px;
+    color:#0f172a;
+}
+
+p{
+    font-size:18px;
+    line-height:1.8;
+    color:#64748b;
+}
+
+.trust-grid,
+.product-grid,
+.why-grid,
+.warranty-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+    margin-top:50px;
+}
+
+.trust-card,
+.product-card,
+.why-card,
+.warranty-card{
+    background:white;
+    border-radius:24px;
+    padding:35px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.trust-card:hover,
+.product-card:hover,
+.why-card:hover,
+.warranty-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+}
+
+.product-card img{
+    width:100%;
+    border-radius:18px;
+    margin-bottom:20px;
+}
+
+.product-card h3{
+    font-size:28px;
+    margin-bottom:15px;
+    color:#0f172a;
+}
+
+.product-card ul{
+    padding-left:20px;
+}
+
+.product-card li{
+    margin:10px 0;
+    font-size:17px;
+}
+
+.section-title{
+    text-align:center;
+    font-size:56px;
+    font-weight:800;
+    margin-bottom:20px;
+}
+
+.section-subtitle{
+    text-align:center;
+    max-width:800px;
+    margin:auto;
+    color:#64748b;
+    font-size:20px;
+}
+.features-list{
+    padding-left:25px;
+    margin-top:20px;
+}
+
+.features-list li{
+    font-size:18px !important;
+    font-weight:500 !important;
+    line-height:1.8 !important;
+    color:#475569 !important;
+    margin-bottom:8px !important;
+}
+
+.product-content h3{
+    font-size:32px !important;
+    margin-bottom:15px;
+    color:#0f172a;
+}
+.contact-info h3{
+    font-size:24px;
+    margin-top:25px;
+    margin-bottom:10px;
+    color:#0f172a;
+}
+
+.contact-info p{
+    font-size:18px;
+    line-height:1.8;
+    color:#475569;
+}
+.feature-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+    margin-top:30px;
+}
+
+.feature-card{
+    background:#f8fafc;
+    border:1px solid #e2e8f0;
+    padding:18px 22px;
+    border-radius:12px;
+    font-size:17px;
+    font-weight:600;
+    color:#0f172a;
+}
+
+.feature-card:hover{
+    transform:translateY(-3px);
+}
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.why-card{
+    background:#fff;
+    padding:35px 25px;
+    border-radius:18px;
+    text-align:center;
+    border:1px solid #e5e7eb;
+}
+
+.why-card h3{
+    font-size:24px;
+    line-height:1.3;
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.why-card p{
+    font-size:16px;
+    line-height:1.7;
+    color:#64748b;
+}
+.why{
+    padding-bottom:20px;
+}
+
+.why-grid{
+    margin-bottom:20px;
+}
+
+.why-card{
+    min-height:300px;
+}
+.manufacturing p{
+    font-size:18px;
+    line-height:1.9;
+    color:#555;
+    max-width:1100px;
+    margin:20px auto;
+    text-align:center;
+}
+.manufacturing-content{
+    max-width:1100px;
+    margin:40px auto 0;
+    padding:0 20px;
+}
+
+.manufacturing-content p{
+    font-size:19px;
+    line-height:2;
+    color:#333;
+    margin-bottom:25px;
+    text-align:left;
+    font-weight:500;
+}
+.manufacturing-box{
+    background:#ffffff;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    margin-top:40px;
+}
+.manufacturing-box p{
+    text-align:left;
+    color:#444;
+}
+
+.manufacturing-image{
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,0.12);
+    margin-bottom:60px;
+}
+.manufacturing{
+    padding:80px 0;
+}
+
+.manufacturing-content{
+    max-width:1000px;
+    margin:50px auto 0;
+    padding:0 30px;
+}
+
+.manufacturing-content p{
+    font-size:18px;
+    line-height:2;
+    color:#555;
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.manufacturing h2{
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+.manufacturing-subtitle{
+    margin-bottom:40px;
+    color:#777;
+}
+.manufacturing-box{
+    max-width:900px;
+    margin:50px auto 0;
+    padding:0 20px;
+}
+.manufacturing-box p{
+    font-size:18px;
+    line-height:2;
+    color:#555;
+    text-align:center;
+    margin-bottom:25px;
+}
+.manufacturing-box h3{
+    font-size:32px;
+    text-align:center;
+    margin-bottom:25px;
+    color:#1f2937;
+}
+.manufacturing-box h3{
+    text-align:center;
+    font-size:32px;
+    margin-bottom:25px;
+    color:#1f2937;
+}
+.manufacturing-box{
+    max-width:1100px;
+    margin:50px auto;
+    background:#ffffff;
+    padding:50px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    text-align:center;
+}
+
+.manufacturing-box h3{
+    font-size:34px;
+    font-weight:700;
+    color:#222c5e;
+    margin-bottom:25px;
+}
+
+.manufacturing-features{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    margin-bottom:30px;
+}
+
+.manufacturing-features span{
+    background:#f4f8ff;
+    color:#222c5e;
+    padding:10px 20px;
+    border-radius:30px;
+    font-weight:600;
+}
+
+.manufacturing-box p{
+    font-size:18px;
+    line-height:2;
+    color:#555;
+    margin-bottom:20px;
+    text-align:center;
+}
+.warranty{
+    background:#f8fafc;
+    padding:100px 0;
+}
+
+.warranty-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    margin-top:50px;
+}
+
+.warranty-card{
+    background:white;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.warranty-card:hover{
+    transform:translateY(-8px);
+}
+
+.warranty-card .icon{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.warranty-card h3{
+    font-size:32px;
+    color:#222c5e;
+    margin-bottom:10px;
+}
+
+.warranty-card p{
+    color:#666;
+    font-size:17px;
+}
+.section-title p{
+    font-size:18px;
+    color:#666;
+    margin-top:10px;
+}
+.warranty-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 20px 40px rgba(0,0,0,0.15);
+}
+.warranty-note{
+    text-align:center;
+    margin-top:40px;
+    color:#666;
+    font-size:17px;
+}
+.warranty-note{
+    display:inline-block;
+    background:#ffffff;
+    padding:15px 30px;
+    border-radius:50px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+    font-size:16px;
+    font-weight:600;
+    color:#222;
+    margin:40px auto 0;
+}
+
+.warranty{
+    text-align:center;
+}
+.warranty-desc{
+    max-width:900px;
+    margin:40px auto 0;
+    font-size:18px;
+    line-height:1.8;
+    color:#555;
+    text-align:center;
+}
+.footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.footer h2{
+    color:white;
+    margin-bottom:15px;
+}
+
+.footer-tagline{
+    color:#bbb;
+    margin-bottom:30px;
+}
+
+.footer-links{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    margin-bottom:30px;
+}
+
+.footer-links a{
+    color:white;
+    text-decoration:none;
+    font-weight:500;
+}
+
+.footer-links a:hover{
+    color:#4CAF50;
+}
+
+.footer-social{
+    font-size:28px;
+    margin:25px 0;
+}
+
+.footer-address{
+    color:#aaa;
+}
+
+.copyright{
+    margin-top:30px;
+    color:#777;
+    font-size:14px;
+}
+.product-images{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:30px;
+    width:100%;
+    padding:20px;
+}
+
+.product-images img{
+    width:450px;
+    max-width:100%;
+    height:auto;
+}
+.product-images img{
+    width:500px;
+    height:auto;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    background:white;
+    padding:15px;
+}
+.product-images img{
+    transition: 0.3s;
+}
+
+.product-images img:hover{
+    transform: translateY(-10px);
+}
+.product-grid{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    overflow:visible;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="navbar">
+
+<div class="logo">
+
+<img src="logo.png">
+
+<h2>Samarth Home Appliances</h2>
+
+</div>
+
+<div class="nav-links">
+
+<a href="#about">About</a>
+<a href="#products">Products</a>
+<a href="#manufacturing">Manufacturing</a>
+<a href="#contact">Contact</a>
+
+</div>
+
+</div>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-container">
+
+<div class="hero-content">
+
+<div class="badge">
+50,000+ Happy Customers
+</div>
+
+<h1>
+Bringing Light To Every Home
+</h1>
+
+<p>
+
+Trusted Solar Energy Solutions Since 2020.
+
+Providing reliable solar home lighting systems across Maharashtra with quality manufacturing and dedicated customer support.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="tel:+918329538775" class="btn-primary">
+Call Now
+</a>
+
+<a href="https://wa.me/918329538775" class="btn-secondary">
+WhatsApp
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="trust">
+
+<div class="trust-grid">
+
+<div class="trust-card">
+<h2>50K+</h2>
+<p>Happy Customers</p>
+</div>
+
+<div class="trust-card">
+<h2>2020</h2>
+<p>Established</p>
+</div>
+
+<div class="trust-card">
+<h2>10Y</h2>
+<p>Panel Warranty</p>
+</div>
+
+<div class="trust-card">
+<h2>MSME</h2>
+<p>Registered</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="about" class="section">
+
+<div class="section-title">
+
+<h2>About Samarth Home Appliances</h2>
+
+<p>
+Trusted Solar Energy Solutions Across Maharashtra
+</p>
+
+</div>
+
+<div class="about-grid">
+
+<div class="about-text">
+
+<p>
+
+Samarth Home Appliances is a trusted MSME Registered Enterprise established in 2020.
+
+With a registered office in Amravati and manufacturing facility in Nagpur, we specialize in reliable solar home lighting systems designed to deliver affordable and sustainable energy solutions.
+
+Over 50,000 customers have trusted our products for lighting, cooling and mobile charging needs.
+
+</p>
+
+<ul class="about-points">
+
+<li>✔ 50,000+ Installations</li>
+
+<li>✔ Nagpur Manufacturing Unit</li>
+
+<li>✔ Amravati Registered Office</li>
+
+<li>✔ Renewable Energy Solutions</li>
+
+<li>✔ Trusted Across Maharashtra</li>
+
+</ul>
+
+</div>
+
+<div class="about-image">
+
+<img src="manufacturing.png">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PRODUCTS -->
+
+<section id="products" class="section">
+
+<div class="section-title">
+
+<h2>Complete Solar Home Lighting Solution</h2>
+
+<p>
+Designed For Reliable Lighting, Cooling & Mobile Charging
+</p>
+
+</div>
+
+<div class="product-grid">
+
+<div class="product-images">
+
+<img src="product.png" alt="product 1">
+<img src="product1.png" alt="product 2">
+
+</div>
+
+<div class="product-content">
+
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- WHY CHOOSE US -->
+
+<section class="section why">
+
+<div class="section-title">
+
+<h2>Why Choose Samarth Home Appliances?</h2>
+
+<p>
+Trusted By Thousands Of Families Across Maharashtra
+</p>
+<h3>Samarth Home Lighting System</h3>
+
+<p>
+The Samarth Home Lighting System is a complete solar energy solution specially designed for homes, villages, farms and areas facing frequent power cuts. This system provides reliable lighting, mobile charging and fan operation using clean solar energy, helping families reduce electricity expenses and enjoy uninterrupted comfort every day.
+</p>
+
+<div class="feature-grid">
+
+<div class="feature-card">High Efficiency Solar Panel</div>
+<div class="feature-card">3 Bright LED Lights Included</div>
+
+<div class="feature-card">Energy Efficient DC Fan Support</div>
+<div class="feature-card">USB Mobile Charging Facility</div>
+
+<div class="feature-card">Long Lasting Battery Backup</div>
+<div class="feature-card">Low Power Consumption</div>
+
+<div class="feature-card">1 Year Product Warranty</div>
+<div class="feature-card">Manufactured & Tested In Nagpur</div>
+
+<div class="feature-card">Eco-Friendly Renewable Energy Solution</div>
+<div class="feature-card">Ideal For Homes, Shops & Rural Areas</div>
+
+</div>
+
+<div class="why-grid">
+
+<div class="why-card">
+
+<h3>🏆 Trusted By 50,000+ Customers</h3>
+
+<p>
+Thousands of households trust our solar products for reliable performance and long-term durability.
+</p>
+
+</div>
+
+<div class="why-card">
+
+<h3>🏭 In-House Manufacturing</h3>
+
+<p>
+Products manufactured and quality tested at our Nagpur facility.
+</p>
+
+</div>
+
+<div class="why-card">
+
+<h3>🛡 Comprehensive Warranty</h3>
+
+<p>
+1 Year Product Warranty and 10 Years Solar Panel Warranty.
+</p>
+
+</div>
+
+<div class="why-card">
+
+<h3>🌱 Clean Energy Solutions</h3>
+
+<p>
+Affordable renewable energy solutions designed for Indian homes.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- MANUFACTURING -->
+
+<section id="manufacturing" class="section">
+
+<div class="section-title">
+
+<h2>Manufacturing Excellence</h2>
+
+<p>
+Designed, Engineered & Manufactured In Nagpur
+</p>
+
+</div>
+
+<img src="manufacturing.png" class="manufacturing-img">
+
+<div class="manufacturing-box">
+
+<h3>Advanced Manufacturing Facility</h3>
+    <div class="manufacturing-features">
+        <span>✓ Modern Machinery</span>
+        <span>✓ Skilled Workforce</span>
+        <span>✓ Quality Testing</span>
+    </div>
+
+<p>
+Our manufacturing facility in Nagpur is equipped with modern machinery, skilled technicians and a dedicated quality control team. Every product is carefully assembled, tested and inspected to ensure reliable performance, safety and long-term durability. From solar home lighting systems to energy-efficient appliances, we follow strict manufacturing standards at every stage of production.
+</p>
+
+<p>
+With years of experience in the renewable energy sector, Samarth Home Appliances focuses on delivering affordable and dependable solutions for Indian households. Our in-house manufacturing capabilities allow us to maintain consistent quality, faster service support and continuous product improvements, ensuring complete customer satisfaction across Maharashtra and beyond.
+</p>
+
+</div>
+
+</section>
+
+<!-- WARRANTY -->
+
+<section class="section warranty">
+
+<div class="section-title">
+
+<h2>Warranty & Guarantee</h2>
+
+<p>
+Quality You Can Trust
+</p>
+
+</div>
+
+<div class="warranty-grid">
+
+<div class="warranty-card">
+    <div class="icon">🛡️</div>
+    <h3>1 Year</h3>
+    <p>Product Warranty</p>
+</div>
+
+<div class="warranty-card">
+    <div class="icon">✅</div>
+    <h3>1 Year</h3>
+    <p>Product Guarantee</p>
+</div>
+
+<div class="warranty-card">
+    <div class="icon">☀️</div>
+    <h3>10 Years</h3>
+    <p>Solar Panel Warranty</p>
+</div>
+
+</div>
+<div class="warranty-note">
+    • Dedicated Customer Support • Fast Service Assistance • Trusted Quality
+</div>
+<p class="warranty-desc">
+We believe great service begins after the sale. Our dedicated support team provides fast assistance, quick issue resolution, and reliable maintenance support. With a strong commitment to customer satisfaction, Samarth Home Appliances ensures a hassle-free ownership experience and dependable service whenever you need it.
+</p>
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact" class="section contact">
+
+<div class="section-title">
+
+<h2>Contact Us</h2>
+
+<p>
+Get In Touch With Our Team
+</p>
+
+</div>
+
+<div class="contact-info">
+
+<h3>📍 Registered Office</h3>
+<p>
+Near Gajanan Auto Deal, Parvatkar Building,<br>
+Sai Nagar, Amravati, Maharashtra – 444607
+</p>
+
+<h3>🏭 Manufacturing Unit</h3>
+<p>
+Sakkardara Chowk,<br>
+Nagpur, Maharashtra – 440009
+</p>
+
+<h3>📞 Phone</h3>
+<p>
++91 83295 38775<br>
++91 90211 76720
+</p>
+
+<h3>✉ Email</h3>
+<p>
+samarthhomeappliance@gmail.com
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <h2>Samarth Home Appliances</h2>
+
+    <p class="footer-tagline">
+        Bringing Light To Every Home
+    </p>
+
+    <div class="footer-links">
+        <a href="#about">About Us</a>
+        <a href="#products">Products</a>
+        <a href="#manufacturing">Manufacturing</a>
+        <a href="#contact">Contact Us</a>
+    </div>
+
+    <div class="footer-social">
+        📘  📷  💼  ▶️
+    </div>
+
+    <p class="footer-address">
+        Nagpur, Maharashtra, India
+    </p>
+
+    <p class="copyright">
+        © 2025 Samarth Home Appliances. All Rights Reserved.
+    </p>
+
+</footer>
+
+</body>
+</html>
